@@ -6,7 +6,7 @@ from uuid import uuid4
 
 app = Flask(__name__)
 
-client = pymongo.MongoClient('mongodb+srv://db_user:Mahesh-01022001@cluster0.zqr8c.mongodb.net/FlaskWorkshop?retryWrites=true&w=majority')
+client = pymongo.MongoClient(<MONGOURL>)
 db = client.FlaskWorkshop
 
 @app.route('/user', methods=['GET', 'POST', 'DELETE', 'PATCH'])
