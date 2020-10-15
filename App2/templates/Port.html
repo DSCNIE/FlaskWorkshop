@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ name }} - Portfolio
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="{{url_for('static', filename='port.css')}}">
+{% endblock %}
+
+{% block body %}
+<div class="highlight-clean text-center align-middle">
+    {% if gender == 'female' %}
+        <img src="https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" style="border-radius: 50%;width: 30vh;height: 30vh;">
+    {% else %}
+        <img src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" style="border-radius: 50%;width: 30vh;height: 30vh;">
+    {% endif %}
+    <div class="container">
+        <div class="intro">
+            <h1 class="text-center">{{ name }}</h1>
+            <p class="text-center">{{ about }}</p>
+        </div>
+        <div class="social">
+            {% if insta != '' %}
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+            {% endif %}
+            {% if linkedin != '' %}
+                <a href="#"><i class="icon ion-social-linkedin"></i></a>
+            {% endif %}
+            {% if twitter != '' %}
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+            {% endif %}
+        </div>
+        {% if github != '' %}
+            <img src="{{'https://github-readme-stats.vercel.app/api?username=' + github + '&count_private=true&show_icons=true&theme=dracula'}}" alt="Github Stats">
+        {% endif %}
+        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Resume</a><a href="{{ 'https://github.com/' + github }}" class="btn btn-light" >Github</a></div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+
+
+<!--  -->

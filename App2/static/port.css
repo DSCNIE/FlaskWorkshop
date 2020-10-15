@@ -1,0 +1,87 @@
+body {
+  background-image: url('./Material-Backgrounds-06-2560-x-1600.jpg');
+  background-attachment: cover;
+  background-repeat: no-repeat;
+}
+
+.social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.social > a:hover {
+  opacity: 0.9;
+}
+
+.highlight-clean {
+  color: #313437;
+  /* background-color: #fff; */
+  padding: 50px 0;
+}
+
+.highlight-clean p {
+  color: black;
+}
+
+.highlight-clean h2 {
+  font-weight: bold;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  padding-top: 0;
+  margin-top: 0;
+  color: inherit;
+}
+
+.highlight-clean .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+
+.highlight-clean .buttons {
+  text-align: center;
+}
+
+.highlight-clean .buttons .btn {
+  padding: 16px 32px;
+  margin: 6px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  line-height: 1;
+  outline: none;
+  background-color: #ddd;
+}
+
+.highlight-clean .buttons .btn:hover {
+  opacity: 1;
+}
+
+.highlight-clean .buttons .btn:active {
+  transform: translateY(1px);
+}
+
+.highlight-clean .buttons .btn-primary {
+  background-color: #055ada;
+  color: #fff;
+}

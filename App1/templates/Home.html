@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1 class="is-size-1">My name</h1>
+<h3 class="is-size-3">
+    {{ name }} <br>
+    {% if name == 'Iresh' %}
+        <span class="red">Kolkata</span>
+    {% else %}
+        Not Kolkata
+    {% endif %}
+    <br>
+    {% for i in lists %}
+        <b>{{ i }}</b>
+    {% endfor %}
+        
+</h3>
+{% endblock %}
